@@ -55,15 +55,19 @@ Each manufacturer or business in the industrial chain is responsible for its own
 
 ## Specification
 
+The most important document in the transaction of physical commodity is the purchase contract between the buyer and the seller. The contract will specify the quantity, specification, model, unit price, total price, payment method and other important information of this transaction.
+
+
+
 The establishment of physical commodity supply chain credit system mainly includes the following attributes.
 
 
 
-1. Government competent / regulatory authorities: such as industrial and commercial registration documents, tax documents, customs documents, etc
+1. Physical properties ofcommodity: brand, product name, specification and model, production date, warranty period, precautions, etc., especially the relevant data collected through the Internet of things are more authoritative and credible.
 
 
 
-2. Relevant contracts: including purchase / supply and marketing contracts or consumer orders of all parties.
+2. Manufacturers and merchants: brand, trademark, qualification, process standard, etc.
 
 
 
@@ -71,11 +75,8 @@ The establishment of physical commodity supply chain credit system mainly includ
 
 
 
-4. Manufacturers and merchants: brand, trademark, qualification, process standard, etc.
+4. Government competent / regulatory authorities: such as industrial and commercial registration documents, tax documents, customs documents, etc
 
-
-
-5. Physical properties of Commodity: brand, product name, specification and model, production date, warranty period, precautions, etc., especially the relevant data collected through the Internet of things are more authoritative and credible.
 
 
 
@@ -87,11 +88,11 @@ According to the role of commodity production and circulation, the subject attri
 
 
 
-2. Product manufacturer: according to the production plan, sign the raw material supply and marketing contract with the raw material supplier, and pay the corresponding amount to the raw material supplier. According to the needs of channel agents or distributors, sign sales contracts with them, collect payment for commodity and provide commodity. Its main attributes include: Industrial and commercial registration documents, qualification documents, qualification documents, inspection and testing reports, quality assurance system, production standards, management system and main processes. Its commodity attributes include: Specification and model, quality inspection report, main technical indicators, precautions, etc.
+2. Product manufacturer: according to the production plan, sign the raw material supply and marketing contract with the raw material supplier, and pay the corresponding amount to the raw material supplier. According to the needs of channel agents or distributors, sign sales contracts with them, collect payment for commodity and provide goods. Its main attributes include: Industrial and commercial registration documents, qualification documents, qualification documents, inspection and testing reports, quality assurance system, production standards, management system and main processes. Its commodity attributes include: Specification and model, quality inspection report, main technical indicators, precautions, etc.
 
 
 
-3. Channel agent or distributor: sign supply and marketing contract with commodity manufacturer, pay for goods, and promote sales to consumers. Collect payment from consumers and provide them with goods and services. Its main attributes include: Industrial and commercial registration documents, qualification documents, qualification documents, inspection and testing reports. Its commodity attributes include: Specification and model, quality inspection report, main technical indicators, precautions, etc.; its operation attributes include information of commodity on and off the shelf, marketing activities, discounts, points, etc.
+3. Channel agent or distributor: sign supply and marketing contract with commodity manufacturer, pay for commodity, and promote sales to consumers. Collect payment from consumers and provide them with commodity and services. Its main attributes include: Industrial and commercial registration documents, qualification documents, qualification documents, inspection and testing reports. Its commodity attributes include: Specification and model, quality inspection report, main technical indicators, precautions, etc.; its operation attributes include information of goods on and off the shelf, marketing activities, discounts, points, etc.
 
 
 
@@ -99,19 +100,18 @@ According to the role of commodity production and circulation, the subject attri
 
 
 
-5. Consumers: place orders with dealers, pay for commodity and purchase commodity. In addition to personal information, it also includes return and exchange information, payment and refund information, receiving information, complaints, etc.
+5. Consumers: place orders with dealers, pay for goods and purchase commodity. In addition to personal information, it also includes return and exchange information, payment and refund information, receiving information, complaints, etc.
 
 
 
-In the process of commodity production and circulation, the core users are producers and channel agents / distributors. With the extension of the supply chain, the ownership of raw materials and commodities will also be transferred with the execution of corresponding contracts.
-
+In the process of commodity production and circulation, the core users are producers and channel agents / distributors. With the extension of the supply chain, the ownership of raw materials and commodities will also be transferred with the execution of corresponding contracts. That is to say, a complete and reliable commodity blockchain, in addition to the main physical properties of this commodity, should include the blockchain of raw materials or products of its upstream major suppliers.
 
 ### Meta Data
 
 | Item | Description | Behaviors/Properties |
 |:-|:-|:-|
 | Owner                       | Create Commodity Token                                          |                      |
-| Commodity                   |Commodity Info.：TokenId、URL、Partners: raw material suppliers, manufacturers, channel agents, distributors。|                      |
+| Commodity                   |Commodity Info.：TokenId、Contracts、URL、Partners token: raw material suppliers, manufacturers, channel agents, distributors。|                      |
 
 ### Interaction / Functions 
 
@@ -119,6 +119,8 @@ In the process of commodity production and circulation, the core users are produ
 |:-|:-|:-|
 |Mint | Create Commodity Token | permission：Owner |
 | Transfer | transfer own to Partners NEW Address | permission: Neworg |
+| Get Extension String | get extension string data |  |
+| Set Extension String  | set extension string data | permission: Owner |
 
 
 ## Rationale (optional)
@@ -131,7 +133,7 @@ All NEPs that introduce backwards incompatibilities must include a section descr
 
 ## Test Cases (optional)
 
-Test cases for an implementation are mandatory for NEPs that are affecting consensus changes. Other NEPs can choose to include links to test cases if applicable.
+Take the production and sales of new energy vehicles as an example. New energy vehicle manufacturers will have several core suppliers, such as automobile chassis, motor, battery pack and battery management system, automobile glass, etc. The blockchain of new energy vehicles will include its supplier contract, the blockchain of supplier products (automobile chassis, motor, battery pack and battery management system, automobile glass, etc.). The blockchain of new energy vehicles will also be delivered to auto agents or dealers, and finally to consumers.
 
 ## Implementation (optional)
 
